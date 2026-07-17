@@ -38,10 +38,21 @@ def generate_github_event():
     }
 
 
-if __name__ == "__main__":
+def generate_events(count=10):
     events = []
 
-    for _ in range(10):
+    for _ in range(count):
         events.append(generate_github_event())
 
-    print(json.dumps(events, indent=4))
+    return events
+
+
+def get_github_events(count=10):
+    """
+    This function will be used by FastAPI later.
+    """
+    return generate_events(count)
+
+
+if __name__ == "__main__":
+    print(json.dumps(get_github_events(), indent=4))
