@@ -34,7 +34,3 @@ def generate_ide_event():
 if __name__ == "__main__":
     events = [generate_ide_event() for _ in range(10)]
     print(json.dumps(events, indent=4))
-    
-
-
-    

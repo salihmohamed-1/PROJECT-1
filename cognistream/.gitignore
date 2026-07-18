@@ -1,4 +1,5 @@
 
+
 # Python
 __pycache__/
 *.pyc
@@ -14,6 +15,10 @@ node_modules/
 
 # VS Code
 .vscode/
+=======
+__pycache__/
+*.pyc
+
 =======
 __pycache__/
 *.pyc
