@@ -10,6 +10,9 @@ def calculate_flow_score(duration_minutes):
     Calculate developer productivity level based on coding duration.
     """
 
+    if duration_minutes < 0:
+        return "Invalid"
+
     if duration_minutes >= 90:
         return "High"
 
@@ -21,7 +24,7 @@ def calculate_flow_score(duration_minutes):
 
 if __name__ == "__main__":
 
-    test_values = [20, 50, 95]
+    test_values = [-5, 20, 50, 95]
 
     for value in test_values:
         print(
