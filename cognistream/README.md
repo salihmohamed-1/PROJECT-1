@@ -2,27 +2,21 @@
 
 Developer Productivity Analytics Platform
 
----
+## 📌 Overview
 
-## 📌 Project Overview
-
-CogniStream is a developer analytics platform that collects engineering activity from multiple sources such as GitHub, Slack, and IDE activity. The platform processes these events and presents productivity insights through an interactive dashboard.
-
----
+CogniStream is a developer analytics platform that collects engineering activity from multiple sources and displays productivity metrics through an interactive dashboard.
 
 ## ✨ Features
 
-- GitHub activity monitoring
+- GitHub activity tracking
 - Slack activity monitoring
-- IDE coding activity
-- Event processing pipeline
-- Productivity score calculation
-- React dashboard
+- IDE activity simulation
+- Event cleaning pipeline
+- Flow state calculation
 - FastAPI backend
-- ClickHouse database
-- Airflow orchestration
-
----
+- React dashboard
+- Unit testing
+- Project documentation
 
 ## 🛠 Technologies
 
@@ -31,46 +25,41 @@ CogniStream is a developer analytics platform that collects engineering activity
 - React
 - Vite
 - ClickHouse
-- Airflow
+- Apache Airflow
 - Polars
-- GitHub
 
----
+## 📁 Project Structure
 
-## 📁 Folder Structure
-
-```
+```text
 cognistream/
-├── ingestion/
-├── processing/
+├── api/
 ├── airflow/
 ├── clickhouse/
-├── api/
-├── frontend/
 ├── docs/
+├── frontend/
+├── ingestion/
+├── processing/
 ├── tests/
+├── README.md
+└── requirements.txt
 ```
 
----
+## 🚀 Future Enhancements
 
-## 👨‍💻 Team Members
+- Live GitHub API integration
+- Slack API integration
+- ClickHouse database
+- Airflow scheduling
+- Interactive charts
+- Authentication
+
+## 👥 Team
 
 - Salih
 - Meegadeesh
 - Anusha
 - Member4
 
----
+## 📄 License
 
-## 📅 Development Status
-
-✅ Week 1 Completed
-
-- Project Setup
-- Mock APIs
-- Processing Logic
-- Dashboard
-- Documentation
-
----
-    
+Academic Internship Project
