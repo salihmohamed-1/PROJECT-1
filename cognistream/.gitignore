@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+
+# Node.js
+node_modules/
+
+# Environment variables
+.env
+
+# VS Code
+.vscode/
