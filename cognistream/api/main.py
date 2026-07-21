@@ -1,4 +1,5 @@
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 from cognistream.ingestion.mock_apis.github_mock import get_github_events
 from cognistream.ingestion.mock_apis.ide_activity_mock import generate_ide_event
 
@@ -6,6 +7,13 @@ app = FastAPI(
     title="CogniStream API",
     description="Developer Productivity Analytics Platform",
     version="1.0.0"
+)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 
