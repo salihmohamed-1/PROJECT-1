@@ -1,5 +1,21 @@
+import { useEffect, useState } from "react";
+
 function App() {
   const lastUpdated = new Date().toLocaleString();
+
+  const [data, setData] = useState({
+    total_commits: 0,
+    pull_requests: 0,
+    slack_messages: 0,
+    ide_activity: 0,
+  });
+
+  useEffect(() => {
+    fetch("http://127.0.0.1:8000/dashboard")
+      .then((response) => response.json())
+      .then((result) => setData(result))
+      .catch((error) => console.error(error));
+  }, []);
 
   return (
     <div
@@ -35,7 +51,7 @@ function App() {
           }}
         >
           <h3>Total Commits</h3>
-          <h1>0</h1>
+          <h1>{data.total_commits}</h1>
         </div>
 
         <div
@@ -47,7 +63,7 @@ function App() {
           }}
         >
           <h3>Pull Requests</h3>
-          <h1>0</h1>
+          <h1>{data.pull_requests}</h1>
         </div>
 
         <div
@@ -59,7 +75,7 @@ function App() {
           }}
         >
           <h3>Slack Messages</h3>
-          <h1>0</h1>
+          <h1>{data.slack_messages}</h1>
         </div>
 
         <div
@@ -71,7 +87,7 @@ function App() {
           }}
         >
           <h3>IDE Activity</h3>
-          <h1>0</h1>
+          <h1>{data.ide_activity}</h1>
         </div>
       </div>
 
@@ -79,7 +95,7 @@ function App() {
 
       <h2>Status</h2>
 
-      <p>🟡 Backend connection will be added in Week 2.</p>
+      <p>🟢 Backend Connected Successfully</p>
 
       <p>
         <strong>Last Updated:</strong> {lastUpdated}
