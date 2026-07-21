@@ -48,3 +48,30 @@ def dashboard():
         "slack_messages": 18,
         "ide_activity": len(ide_events)
     }
+@app.get("/developer/{name}")
+def developer_dashboard(name: str):
+
+    data = {
+        "salih": {
+            "developer": "Salih",
+            "commits": 15,
+            "pull_requests": 4,
+            "slack_messages": 27,
+            "ide_activity": 11,
+            "flow_score": "High"
+        },
+
+        "meegadeesh": {
+            "developer": "Meegadeesh",
+            "commits": 12,
+            "pull_requests": 3,
+            "slack_messages": 19,
+            "ide_activity": 9,
+            "flow_score": "Medium"
+        }
+    }
+
+    return data.get(
+        name.lower(),
+        {"error": "Developer not found"}
+    )
