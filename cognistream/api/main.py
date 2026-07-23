@@ -1,8 +1,12 @@
+from cognistream.api.analytics import get_developer_metrics
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from cognistream.ingestion.mock_apis.github_mock import get_github_events
 from cognistream.ingestion.mock_apis.ide_activity_mock import generate_ide_event
-
+from cognistream.api.analytics import (
+    get_developer_metrics,
+    get_dashboard_metrics,
+)
 app = FastAPI(
     title="CogniStream API",
     description="Developer Productivity Analytics Platform",
@@ -37,39 +41,10 @@ def health():
     }
 @app.get("/dashboard")
 def dashboard():
-
-    github_events = get_github_events()
-
-    ide_events = [generate_ide_event() for _ in range(10)]
-
-    return {
-        "total_commits": len(github_events),
-        "pull_requests": 2,
-        "slack_messages": 18,
-        "ide_activity": len(ide_events)
-    }
+    return get_dashboard_metrics()
 @app.get("/developer/{name}")
 def developer_dashboard(name: str):
-
-    data = {
-        "salih": {
-            "developer": "Salih",
-            "commits": 15,
-            "pull_requests": 4,
-            "slack_messages": 27,
-            "ide_activity": 11,
-            "flow_score": "High"
-        },
-
-        "meegadeesh": {
-            "developer": "Meegadeesh",
-            "commits": 12,
-            "pull_requests": 3,
-            "slack_messages": 19,
-            "ide_activity": 9,
-            "flow_score": "Medium"
-        }
-    }
+    return get_developer_metrics(name)
 
     return data.get(
         name.lower(),

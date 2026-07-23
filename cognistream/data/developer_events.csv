@@ -1,0 +1,29 @@
+timestamp,developer,source,event,duration_minutes
+2026-07-20 09:00:00,Salih,IDE,coding_start,45
+2026-07-20 09:45:00,Salih,GitHub,commit,2
+2026-07-20 09:47:00,Salih,IDE,coding,60
+2026-07-20 10:47:00,Salih,Slack,notification,1
+2026-07-20 10:48:00,Salih,IDE,coding,90
+2026-07-20 12:18:00,Salih,Jira,ticket_update,5
+2026-07-20 12:23:00,Salih,IDE,coding,80
+2026-07-20 13:43:00,Salih,GitHub,pull_request,4
+2026-07-20 13:47:00,Salih,Slack,message,2
+2026-07-20 13:49:00,Salih,IDE,coding,70
+
+2026-07-20 09:00:00,Meegadeesh,IDE,coding_start,30
+2026-07-20 09:30:00,Meegadeesh,Slack,message,2
+2026-07-20 09:32:00,Meegadeesh,IDE,coding,50
+2026-07-20 10:22:00,Meegadeesh,GitHub,commit,2
+2026-07-20 10:24:00,Meegadeesh,IDE,coding,110
+2026-07-20 12:14:00,Meegadeesh,Jira,ticket_update,5
+2026-07-20 12:19:00,Meegadeesh,GitHub,pull_request,3
+2026-07-20 12:22:00,Meegadeesh,Slack,notification,1
+2026-07-20 12:23:00,Meegadeesh,IDE,coding,95
+
+2026-07-20 09:00:00,Anusha,IDE,coding_start,60
+2026-07-20 10:00:00,Anusha,GitHub,commit,2
+2026-07-20 10:02:00,Anusha,IDE,coding,120
+2026-07-20 12:02:00,Anusha,Slack,message,2
+2026-07-20 12:04:00,Anusha,Jira,ticket_update,5
+2026-07-20 12:09:00,Anusha,IDE,coding,90
+2026-07-20 13:39:00,Anusha,GitHub,pull_request,4

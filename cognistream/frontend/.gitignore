@@ -1,3 +1,19 @@
+# Node
+node_modules/
+**/node_modules/
+
+# Vite
+.vite/
+dist/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Environment
+.env
 # Logs
 logs
 *.log
